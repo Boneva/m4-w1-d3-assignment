@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Midule 4 Week 1 Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.11/vue.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Fresh Food To Go</h1>
+    </div>
+
+    <div id="vue">
+ <div class="menu">
+  <h2 class="section-title">Selections</h2>
+  <div class="grid">
+    <div class="card" v-for="item in items">
+      <img :src="item.img" :alt="item.name" />
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.desc }}</p>
+      <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+    </div>
+  </div>
+</div>
+</div>
+
+    
+<div class="main-wrapper">
+  
+    
+  <script>
+    new Vue({
+      el: '#vue',
+      data: {
+        items: [
+          {
+            name: "Spaghetti Aglio e Olio",
+            desc: "Classic Italian garlic pasta",
+            img: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Spaghetti_aglio%2C_olio_e_peperoncino_%2816284859030%29.jpg"
+          },
+          {
+            name: "Red Crab Escabeche",
+            desc: "Crayfish with asparagus gazpacho",
+            img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jacques_Lameloise%2C_escab%C3%A8che_d%27%C3%A9crevisses_sur_gaspacho_d%27asperge_et_cresson.jpg"
+          },
+          {
+            name: "Hearty Breakfast",
+            desc: "A soulful morning start",
+            img: "https://upload.wikimedia.org/wikipedia/commons/0/02/Breakfast_at_Irving_Street_Kitchen.jpg"
+          },
+          {
+            name: "Seafood Linguine",
+            desc: "Fresh seafood pasta delight",
+            img: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Seafood_linguine.jpg"
+          },
+          {
+            name: "Mixed Kebab",
+            desc: "Authentic Middle Eastern grill",
+            img: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Various_kebab.jpg"
+          },
+          {
+            name: "Chicken Steak",
+            desc: "Grilled with pepper sauce",
+            img: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Chicken_steak_with_pepper_sauce.jpg"
+          },
+          {
+            name: "Filet Mignon",
+            desc: "Paired with foie gras & muscat",
+            img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/.Filet_mignon_et_foie_gras_au_muscat_de_Beaumes-de-Venise%2C_Pastis_Bistro%2C_Palo_Alto.jpg"
+          },
+          {
+            name: "Bistro Delight",
+            desc: "Australian bistro dishes",
+            img: "https://upload.wikimedia.org/wikipedia/commons/4/48/Dishes_at_Bistro_C%2C_Hastings_Street%2C_Noosa_Heads%2C_Queensland_02.jpg"
+          },
+          {
+            name: "Crepe Special",
+            desc: "Filled with grilled shrimp",
+            img: "https://upload.wikimedia.org/wikipedia/commons/3/32/2011-04-09_17.02.43%2C_Whispers_Cafe_and_Creperie%2C_Belmont%2C_CA_%285982715933%29.jpg"
+          },
+          {
+            name: "Tower Burger",
+            desc: "Peruvian-style stacked burger",
+            img: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Hamburguesa_de_carne.jpg"
+          },
+          {
+            name: "Chicken Garlic Pizza",
+            desc: "Cheesy and full of flavor",
+            img: "https://upload.wikimedia.org/wikipedia/commons/3/33/Round_Table_chicken_%26_garlic_pizza.JPG"
+          },
+          {
+            name: "Wok Stir Fry",
+            desc: "Noodles with vegetables",
+            img: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Stir_Fry_Wok_-_Free_For_Commercial_Use_-_FFCU_%2827159057131%29.jpg"
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>
